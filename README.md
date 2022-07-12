@@ -73,6 +73,16 @@ url = "https://tictactoe.example.com/"
     - Whitespace may be important, could impact compression
 - Primary (*Always*!?) use TOML for config
 ### 1.3 TOML Schema Validation
+- Syntax requirements
+- *Schema* requirements
+    - url may be required
+    - colors may be optional
+- TOML does not include a schema language
+- *Schema* will need to be validated manually
+- Use a method that validates your config.
+- Could use Python 3.10's patern matching to simplify
+- Use other libraries that provide data validation, like *pydantic* if your configuration is more complicated
+- [Taplo](https://taplo.tamasfe.dev/) is a python library that provides validation and is availbale as a VSCode extension [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
 ## 2.0 Get to Know TOML: Key-Value Pairs
 ### 2.1 Strings, Numbers, and Booleans
 ### 2.2 Tables
