@@ -82,7 +82,7 @@ url = "https://tictactoe.example.com/"
 - Use a method that validates your config.
 - Could use Python 3.10's patern matching to simplify
 - Use other libraries that provide data validation, like *pydantic* if your configuration is more complicated
-- [Taplo](https://taplo.tamasfe.dev/) is a python library that provides validation and is availbale as a VSCode extension [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
+- [Taplo](https://taplo.tamasfe.dev/) is a rust and javascript library and cli that provides validation and is availbale as a VSCode extension [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
 ## 2.0 Get to Know TOML: Key-Value Pairs
 ### 2.1 Strings, Numbers, and Booleans
 ### 2.2 Tables
