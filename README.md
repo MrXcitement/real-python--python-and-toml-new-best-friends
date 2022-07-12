@@ -5,7 +5,7 @@ https://realpython.com/python-toml/
 A [Real Python](https://realpython.com) tutorial that teaches about TOML, what it is and how to use it.
 This repository provides a place to work throught the examples in the tutorial.
 
-## Use TOML as a Configuration Format
+## 1.0 Use TOML as a Configuration Format
 - TOML: Tom’s Obvious Minimal Language
 - Configuration file format
 
