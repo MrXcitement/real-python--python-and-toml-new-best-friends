@@ -47,6 +47,31 @@ url = https://tictactoe.example.com/
     - plain-text, human readable, variety of formats on Unix/macOS
     - XML, JSON, YAML can be used as config files, however they are fidly due to be designed for data interchange or serialization instead of config.
 ### 1.2 TOML: Tom’s Obvious Minimal Language
+- First release 0.1.0 in 2013
+- Focus: minimal config file format, human readable.
+- popular among python tools: [Black](https://black.readthedocs.io/), [pytest](https://docs.pytest.org/),[mypy](https://mypy.readthedocs.io/) and [isort](https://black.readthedocs.io/)
+- [TOML parsers](https://github.com/toml-lang/toml/wiki#implementations) available for many languages
+- TOML config
+```TOML
+[user]
+player_x_color = "blue"
+player_o_color = "green"
+
+[contant]
+board_state = 3
+
+[server]
+url = "https://tictactoe.example.com/"
+```
+- Advantage over INI files, there is a *specification* for the file format.
+- TOML has *types* so the config setting: player_x_color is assigned a *string* type with the value of "blue"
+- A criticisim is that the human editing a TOML file will need to know about types
+- TOML is *not* meant to be used as a data interchange or serialization format.
+- TOML has some restrictions
+    - All *keys* are strings
+    - No *null* type
+    - Whitespace may be important, could impact compression
+- Primary (*Always*!?) use TOML for config
 ### 1.3 TOML Schema Validation
 ## 2.0 Get to Know TOML: Key-Value Pairs
 ### 2.1 Strings, Numbers, and Booleans
