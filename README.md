@@ -9,25 +9,25 @@ This repository provides a place to work throught the examples in the tutorial.
 - TOML: Tom’s Obvious Minimal Language
 - Configuration file format
 
-### Configurations and Configuration Files
-### TOML: Tom’s Obvious Minimal Language
-### TOML Schema Validation
-## Get to Know TOML: Key-Value Pairs
-### Strings, Numbers, and Booleans
-### Tables
-### Times and Dates
-### Arrays
-## Load TOML With Python
-### Read TOML Documents With tomli and tomllib
-### Compare TOML Types and Python Types
-### Use Configuration Files in Your Projects
-## Dump Python Objects as TOML
-### Convert Dictionaries to TOML
-### Write TOML Documents With tomli_w
-## Create New TOML Documents
-### Format and Style TOML Documents
-### Create TOML From Scratch With tomlkit
-## Update Existing TOML Documents
-### Represent TOML as tomlkit Objects
-### Read and Write TOML Losslessly
-## Conclusion
+### 1.1 Configurations and Configuration Files
+### 1.2 TOML: Tom’s Obvious Minimal Language
+### 1.3 TOML Schema Validation
+## 2.0 Get to Know TOML: Key-Value Pairs
+### 2.1 Strings, Numbers, and Booleans
+### 2.2 Tables
+### 2.3 Times and Dates
+### 2.4 Arrays
+## 3.0 Load TOML With Python
+### 3.1 Read TOML Documents With tomli and tomllib
+### 3.2 Compare TOML Types and Python Types
+### 3.3 Use Configuration Files in Your Projects
+## 4.0 Dump Python Objects as TOML
+### 4.1 Convert Dictionaries to TOML
+### 4.2 Write TOML Documents With tomli_w
+## 5.0 Create New TOML Documents
+### 5.1 Format and Style TOML Documents
+### 5.2 Create TOML From Scratch With tomlkit
+## 6.0 Update Existing TOML Documents
+### 6.1 Represent TOML as tomlkit Objects
+### 6.2 Read and Write TOML Losslessly
+## 7.0 Conclusion
