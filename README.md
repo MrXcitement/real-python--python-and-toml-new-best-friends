@@ -124,6 +124,30 @@ player_x.color  = "purple"
 ```
 - Here `symbol` and `color` are grouped in a section named `player_x`
 ### 2.1 Strings, Numbers, and Booleans
+- TOML syntax similar to Python's
+- String can use double quotes, single quotes
+    - Single quotes are *literal* strings, escape codes not interpreted.
+    - Double quotes allow special escape characters, allows escaped unicode characters to be interpreted
+- Strings can use triple quotes, either double or single, this allows multiple line strings to be specified
+- Numbers are either *integer* or *floating point*
+- *Integer* values ae whole numbers, can use `_` character for readability of large numbers.
+```TOML
+number = 42
+negative = -8
+large = 60_481_729
+```
+- *Floating-point* are decimal numbers, integer, dot, fractional parts
+- Floats can use scientific notation
+- TOML also supports special values like infinity or NaN
+```TOML
+number = 3.11
+googol = 1e100
+mole = 6.22e23
+negative_infinity = -inf
+not-a-number = nan
+```
+- Non-negative integers can be hex, oct or bin using a 0x, 0o, or 0b prefix.
+- Boolean values are represented as `true` or `false` must be all lowercase.
 ### 2.2 Tables
 ### 2.3 Times and Dates
 ### 2.4 Arrays
