@@ -216,6 +216,22 @@ player_o = { symbol = "O", color = "green" }
 - Be aware that indentation can confuse you to think a *key-value* pair is in a table that it is not.
 - I would recomend *not* indenting the TOML file.
 ### 2.3 Times and Dates
+- Four date representations
+    - An *offset date-time* is a timestamp with time zone information, representing a specific instant in time.
+    - A *local date-time* is a timestamp without time zone information.
+    - A *local date* is a date without any time zone information. You typically use this to represent a full day.
+    - A *local time* is a time with any date or time zone information. You use a local time to represent a time of day.
+- Representation based on [RFC 3339](https://datatracker.ietf.org/doc/html/rfc3339)
+- Example of each time and date representations
+```TOML
+offset_date-time     = 2021-01-12 01:23:45+01:00
+offset_date-time_utc = 2021-01-12 00:23:45Z
+local_date-time      = 2021-01-12 01:23:45
+local_date           = 2021-01-12
+local_time           = 01:23:45
+local_time_with_us   = 01:23:45.654321
+```
+
 ### 2.4 Arrays
 ## 3.0 Load TOML With Python
 ### 3.1 Read TOML Documents With tomli and tomllib
