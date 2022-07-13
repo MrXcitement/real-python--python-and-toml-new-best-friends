@@ -84,6 +84,45 @@ url = "https://tictactoe.example.com/"
 - Use other libraries that provide data validation, like *pydantic* if your configuration is more complicated
 - [Taplo](https://taplo.tamasfe.dev/) is a rust and javascript library and cli that provides validation and is availbale as a VSCode extension [Even Better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
 ## 2.0 Get to Know TOML: Key-Value Pairs
+- built around [key-value pairs](https://toml.io/en/v1.0.0#keyvalue-pair), this maps well to hash tables
+- values have specific types
+    - [String](https://toml.io/en/v1.0.0#string)
+    - [Integer](https://toml.io/en/v1.0.0#integer)
+    - [Float](https://toml.io/en/v1.0.0#float)
+    - [Boolean](https://toml.io/en/v1.0.0#boolean)
+    - [Offset Date-Time](https://toml.io/en/v1.0.0#offset-date-time)
+    - [Local Date-Time](https://toml.io/en/v1.0.0#local-date-time)
+    - [Local Date](https://toml.io/en/v1.0.0#local-date)
+    - [Local Time](https://toml.io/en/v1.0.0#local-time)
+    - [Array](https://toml.io/en/v1.0.0#array)
+    - [Inline Table](https://toml.io/en/v1.0.0#inline-table)
+- [Tables](https://toml.io/en/v1.0.0#tables) and [Array of Tables](https://toml.io/en/v1.0.0#array-of-tables) can be used to *categorize* or *organize* several key-value pairs.
+- A bare minimum TOML file must have a *key-value* pair
+- The *value* has a type infered by it's format
+```TOML
+key_string = "string"
+key_integer = 42
+key_float = 42.0
+```
+- The *key* is always a string
+```TOML
+greeting = "Hello, TOML!"
+42 = "Life, the universe, and everything"
+```
+- TOML documents *must* be encoded in UTF-8
+- Add quotation marks around keys to force keys to use unicode.
+```TOML
+"realpython.com" = "Real Python"
+"blåbærsyltetøy" = "blueberry jam"
+"Tom Preston-Werner" = "creator"
+```
+- In general you shoud use *bare* keys without quotes
+- Dots in unquoted keys trigger grouping by splitting at each dot
+```TOML
+player_x.symbol = 'X'
+player_x.color  = "purple"
+```
+- Here `symbol` and `color` are grouped in a section named `player_x`
 ### 2.1 Strings, Numbers, and Booleans
 ### 2.2 Tables
 ### 2.3 Times and Dates
