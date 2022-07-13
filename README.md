@@ -231,8 +231,37 @@ local_date           = 2021-01-12
 local_time           = 01:23:45
 local_time_with_us   = 01:23:45.654321
 ```
-
 ### 2.4 Arrays
+- An ordered list of values
+- Specify with square braces
+```TOML
+packages = ["tomllib", "tomli", "tomli_w", "tomlkit"]
+```
+- Arrays can contain
+    - Any data type, including Arrays
+    - Different data types in an array
+- Arrays can span multiple lines
+- You can use a trailing comma after last element
+- Arrays of tables can be written inline
+```TOML
+players = [
+    { symbol = "X", color = "blue", ai = true },
+    { symbol = "O", color = "green", ai = false },
+]
+```
+- However, it is *recomended* to use the double square bracket syntax instead.
+```TOML
+[[players]]
+symbol = "X"
+color = "blue"
+ai = true
+
+[[players]]
+symbol = "O"
+color = "green"
+ai = false
+```
+- This is more readable and is the same as the inline table syntax above.
 ## 3.0 Load TOML With Python
 ### 3.1 Read TOML Documents With tomli and tomllib
 ### 3.2 Compare TOML Types and Python Types
