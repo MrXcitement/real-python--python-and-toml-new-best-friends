@@ -149,6 +149,72 @@ not-a-number = nan
 - Non-negative integers can be hex, oct or bin using a 0x, 0o, or 0b prefix.
 - Boolean values are represented as `true` or `false` must be all lowercase.
 ### 2.2 Tables
+- Since TOML documents consist of *key-value* pairs they would be stored in a *hash table* data structure.
+- In python that would be dictionary or dictionary-like data structure
+- To organize the *key-value* pairs, we can use *tables*
+- Three ways to specify *tables*
+    - use *regular tables* with *headers* to seperate the *key-value* pairs into tables, should be default table type
+    - use *dotted key tables* when you need to specify *key-value* pairs that are closely tied to the parent
+    - use *inline tables* for very small tables
+- Only use *dotted key tables* or *inline tables* when they clarify intent
+- Example tables
+```TOML
+[user]
+player_x.color = "blue"
+player_o.color = "green"
+
+[constant]
+board_size = 3
+
+[server]
+url = "https://tictactoe.example.com"
+```
+- Table headers: user, constant and server
+- Dotted key tables: player_x and player_o
+- Example `[user]` table with nested regular, not dotted key tables
+```TOML
+[user]
+
+    [user.player_x]
+    color = "blue"
+
+    [user.player_o]
+    color = "green"
+```
+- For this case, the *dotted key tables* seem to be clearer.
+- Note that the full name of the nested table must be used, indentation is only used above to make it more readable.
+- Example `[user]` table with an additional key for the `[user.player_x]` and `[user.player_o]` tables
+```TOML
+[user]
+
+    [user.player_x]
+    symbol = "X"
+    color = "blue"
+
+    [user.player_o]
+    symbol = "O"
+    color = "green"
+```
+- Clarity two different player tables and the *key-value* pairs for each one
+- Example `[user]` table with *dotted key tables* instead of nested as above.
+```TOML
+[user]
+player_x.symbol = "X"
+player_x.color = "blue"
+player_o.symbol = "O"
+player_o.color = "green"
+```
+- Example `[user]` table with *inline tables*
+```TOML
+[user]
+player_x = { symbol = "X", color = "blue" }
+player_o = { symbol = "O", color = "green" }
+```
+- TOML documents are defined as a nameless root table
+- *key-pairs* defined at before any *table* header are defined in the root table.
+- a *table* includes all *key-value* pairs until the next *table* header
+- Be aware that indentation can confuse you to think a *key-value* pair is in a table that it is not.
+- I would recomend *not* indenting the TOML file.
 ### 2.3 Times and Dates
 ### 2.4 Arrays
 ## 3.0 Load TOML With Python
