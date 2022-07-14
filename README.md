@@ -295,6 +295,18 @@ except ModuleNotFoundError:
 - Python's tomllib [documentation](https://docs.python.org/3.11/library/tomllib.html#conversion-table) has a TOML <-> Python conversion table.
 - `load` and `loads` functions provide a paramter to determine how a `float` is parsed. If you need greater precision you may need this parameter.
 ### 3.3 Use Configuration Files in Your Projects
+- Config files:
+    - *names* values and concepts
+    - provides more *visibility* for specific values
+    - makes values simpler to *change*
+- How to use?
+    - make sure config is *parsed once*
+    - how to access from *different modules*
+- Wrap config in a Python Module resolves these questions.
+- Create a `config` folder and place the config file in it
+- Create an `__init__.py` file in the `config` folder
+- In the `__init__.py` read the config file into a dictionary
+- Example [__init__.py](./config/__init__.py)
 ## 4.0 Dump Python Objects as TOML
 ### 4.1 Convert Dictionaries to TOML
 ### 4.2 Write TOML Documents With tomli_w
