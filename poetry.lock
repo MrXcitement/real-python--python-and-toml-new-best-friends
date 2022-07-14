@@ -212,6 +212,14 @@ socks = ["PySocks (>=1.5.6,!=1.5.7)"]
 use_chardet_on_py3 = ["chardet (>=3.0.2,<6)"]
 
 [[package]]
+name = "tomli"
+version = "2.0.1"
+description = "A lil' TOML parser"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "typing-extensions"
 version = "3.10.0.2"
 description = "Backported and Experimental Type Hints for Python 3.5+"
@@ -270,7 +278,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.8.0,<3.9"
-content-hash = "8a19056c445f0446f787a5c393171a3a497989c5e6e433044e538777fe2eaaa1"
+content-hash = "fc672079c8fadc841d9f4560e1b01a7937ad3c4957e82643d4cde83e60c87761"
 
 [metadata.files]
 aiohttp = []
@@ -291,6 +299,7 @@ markupsafe = []
 multidict = []
 replit = []
 requests = []
+tomli = []
 typing-extensions = []
 urllib3 = []
 werkzeug = []
