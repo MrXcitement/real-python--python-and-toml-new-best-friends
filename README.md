@@ -284,6 +284,16 @@ except ModuleNotFoundError:
     import tomli as tomllib
 ```
 ### 3.2 Compare TOML Types and Python Types
+- TOML specification mentions some requirements on its own types.
+    - A TOML file must be a valid UTF-8 encoded Unicode document.
+    - Arbitrary 64-bit signed integers (from −2^63 to 2^63−1) should be accepted and handled losslessly.
+    - Floats should be implemented as IEEE 754 binary64 values.
+- Python types are a close match for the above requiremnts
+    - file handling usually defaults to using UTF-8
+    - Integers are implements as arbitrary-precision integers, which handle the required range and much larger numbers
+    - Floats follow IEEE 754
+- Python's tomllib [documentation](https://docs.python.org/3.11/library/tomllib.html#conversion-table) has a TOML <-> Python conversion table.
+- `load` and `loads` functions provide a paramter to determine how a `float` is parsed. If you need greater precision you may need this parameter.
 ### 3.3 Use Configuration Files in Your Projects
 ## 4.0 Dump Python Objects as TOML
 ### 4.1 Convert Dictionaries to TOML
