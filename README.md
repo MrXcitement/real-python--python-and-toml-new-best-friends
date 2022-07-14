@@ -264,6 +264,25 @@ ai = false
 - This is more readable and is the same as the inline table syntax above.
 ## 3.0 Load TOML With Python
 ### 3.1 Read TOML Documents With tomli and tomllib
+- [tomli](https://pypi.org/project/tomli/)
+- [tomllib](https://docs.python.org/3.11/library/tomllib.html)
+- TOML support will be in Python 3.11+
+- The builtin module will be based on `tomllib`
+- Create a simple toml file [tic_tac_toe.toml](./tic_tac_toe.toml)
+- `tomli` module only has two functions: `load` and `loads`
+- `load` will read a [file object] into a dictionary
+    - The file must be open in binary mode, ie `mode=rb`
+- `loads` will read a properly encoded python string into a dictionary
+    - You can create a triple quoted string to test `loads`
+    - Make sure if you read text from a file to encode it as "utf-8"
+        - Path('pathname').read_text(encoding="utf-8")
+- To handle the transition to `tomllib` you can:
+```Python
+try:
+    import tomllib
+except ModuleNotFoundError:
+    import tomli as tomllib
+```
 ### 3.2 Compare TOML Types and Python Types
 ### 3.3 Use Configuration Files in Your Projects
 ## 4.0 Dump Python Objects as TOML
